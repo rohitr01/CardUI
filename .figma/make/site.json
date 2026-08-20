@@ -1,0 +1,10 @@
+{
+  "description": "Delivers a modern, intuitive website offering seamless navigation and a clean interface to enhance user engagement and accessibility for all visitors.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
