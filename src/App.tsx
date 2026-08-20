@@ -9,6 +9,9 @@ import RewardsCalculatorPage from "./pages/RewardsCalculatorPage";
 import ComparisonPage from "./pages/ComparisonPage";
 import CardRoastPage from "./pages/CardRoastPage";
 import TravelCardsPage from "./pages/TravelCardsPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
+import ContactPage from "./pages/ContactPage";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -36,6 +39,9 @@ export default function App() {
         <Route path="/credit-cards" element={<Layout><ResultsPage /></Layout>} />
         <Route path="/banks" element={<Layout><ResultsPage /></Layout>} />
         <Route path="/guides" element={<Layout><HomePage /></Layout>} />
+        <Route path="/privacy" element={<Layout><PrivacyPage /></Layout>} />
+        <Route path="/terms" element={<Layout><TermsPage /></Layout>} />
+        <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
         <Route path="*" element={<Layout><HomePage /></Layout>} />
       </Routes>
     </BrowserRouter>

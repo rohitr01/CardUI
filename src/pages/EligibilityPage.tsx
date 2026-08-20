@@ -51,7 +51,15 @@ export default function EligibilityPage() {
 
   function handleContinue() {
     if (step < totalSteps) setStep(step + 1);
-    else navigate("/results");
+    else {
+      const params = new URLSearchParams();
+      if (age) params.set("age", age);
+      if (city) params.set("city", city);
+      if (selectedCategories.length > 0) params.set("cats", selectedCategories.join(","));
+      if (employment) params.set("emp", employment);
+      if (income) params.set("income", income);
+      navigate(`/results?${params.toString()}`);
+    }
   }
 
   function canContinue() {

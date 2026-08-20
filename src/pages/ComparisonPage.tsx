@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const compareCards = [
   {
+    id: "hdfc-regalia-gold",
     name: "HDFC Regalia Gold",
     category: "Premium Travel",
     badge: null,
@@ -20,6 +23,7 @@ const compareCards = [
     gradient: "from-[#d4a843] to-[#c8922e]",
   },
   {
+    id: "sbi-elite",
     name: "SBI Card ELITE",
     category: "Lifestyle & Rewards",
     badge: { text: "Best Value", color: "bg-[#f59e0b]" },
@@ -40,6 +44,7 @@ const compareCards = [
     gradient: "from-[#1a1a2e] to-[#0f0f1e]",
   },
   {
+    id: "axis-atlas",
     name: "Axis Bank Atlas",
     category: "Frequent Flyer",
     badge: null,
@@ -113,7 +118,7 @@ export default function ComparisonPage() {
                         </div>
                         <div className="font-bold text-[12px] sm:text-[14px] lg:text-[16px] text-[#191c1e] mb-0.5 text-center">{card.name}</div>
                         <div className="text-[10px] sm:text-[12px] text-[#45464d] mb-2 text-center">{card.category}</div>
-                        <button className="w-full bg-[#191c1e] hover:bg-[#000] text-white font-semibold text-[11px] sm:text-[13px] py-2 rounded-xl transition-colors">Apply Now</button>
+                        <Link to={`/cards/${card.id}`} className="w-full block bg-[#191c1e] hover:bg-[#000] text-white font-semibold text-[11px] sm:text-[13px] py-2 rounded-xl transition-colors text-center">Apply Now</Link>
                       </th>
                     ))}
                   </tr>
